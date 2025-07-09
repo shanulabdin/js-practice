@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body{
+      background-color: gray;
+    }
+  </style>
+</head>
+<body>
+  <button class="js-9a-button" onclick="
+    document.querySelector('.js-display-move')
+      .innerHTML = `You chose: heads`;
+    ">heads</button>
+  <button class="js-9b-button" onclick="
+    document.querySelector('.js-display-move')
+      .innerHTML = `You chose: tails`;
+  ">tails</button>
+  <p class="js-display-move"></p>
+
+  <script>
+
+    // document.querySelector('.js-9b-button')
+    //   .innerHTML = 'changed';
+  </script>
+</body>
+</html>

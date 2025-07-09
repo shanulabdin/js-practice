@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // square a number
+    // function square(num) {
+    // return num * num;
+    // }
+
+    // console.log(square(3));
+
+    // function greet(name) {
+    //   return `Hello ${name}`;
+    // }
+    // console.log(greet("Shan"));
+
+    // function max(a,b){
+    //   if (a > b){
+    //     return a;
+    //   } else if (a < b) {
+    //     return b;
+    //   } else {
+    //     return `${a} = ${b}`;
+    //   }
+    // }
+    //   console.log(max(5,4));
+
+//     // 1
+//     function isEvenOrOdd(number){
+//       if (number % 2 === 0){
+//         return `even`;
+//       } else{
+//         return `odd`;
+//       }
+//     }
+//     console.log(isEvenOrOdd(3));
+
+//     // 2
+//     function absolute(digit){
+//       if (digit < 0){
+//         return digit * -1;
+//       } else {
+//         return digit;
+//       }
+//     }
+//     console.log(absolute(-5));
+
+//     // 3
+//     function checkAge(num){
+//       if (num >= 18){
+//         return `Adult.`;
+//       } else {
+//         return `Minor.`;
+//       }
+//     }
+//     console.log(checkAge(4));
+
+//     // 4
+//     function greet(name){
+//       return `Hello, ${name}`
+//     }
+//     console.log(greet('shan'));
+
+//     // 5
+//     function isTriangle(numb1, numb2, numb3){
+//       if(numb1 + numb2 >= numb3 && numb2 + numb3 >= numb1 && numb1 + numb3 >= numb2){
+//         return `Valid Triangle`;
+//       } else {
+//         return `Not Valid`;
+//       }
+// }
+//       console.log(isTriangle(3, 15, 4))
+
+
+//     // 6
+//     function repeatWord(word, num){
+//       return word.repeat(num);
+//     }
+//     console.log(repeatWord('hi', 4));
+
+//     // 7
+//     function isEqual(num1, num2){
+//       if (num1 === num2){
+//         return `Equal`;
+//       } else {
+//         return `Not Equal`;
+//       }
+//     }
+//     console.log(isEqual(5, 5));
+
+//     // 8
+//     function calculate(number1, number2, operator){
+//       if (operator === '+'){
+//         return number1 + number2;
+//       } else if (operator === '-'){
+//         return number1 - number2;
+//       } else if (operator === '*'){
+//         return number1 * number2;
+//       } else if (operator === '/'){
+//         return number1 / number2;
+//       }
+//     }
+//     console.log(calculate(5, 4, '+'))
+
+//     // 9
+//     function maxNumber(no1, no2, no3){
+//       if (no1 > no2 && no1 > no3){
+//         return no1;
+//       } else if(no2 > no3 && no2 > no1){
+//         return no2;
+//       } else if (no3 > no2 && no3 > no1){
+//         return no3;
+//       }
+//     }
+//     console.log(maxNumber(2, 3, 5));
+
+//     // 10
+//     function isBaby(no){
+//       if(no <= 3){
+//         return `Baby`;
+//       } else {
+//         return `Not a Baby`;
+//       }
+//     }
+//     console.log(isBaby(3));
+
+    // second day
+    // 1
+    function isPositive (num){
+      if (num > 0) {
+        return `${num} is Positive`;
+      } else if (num < 0) {
+        return `${num} is Negetive`;
+      } else if (num === 0){
+        return `${num} is neither negetive or positive`;
+      } else {
+        return `invalid input`;
+      }
+    }
+    console.log(isPositive(0));
+
+    // 2
+    function max(num1, num2) {
+      if (num1 > num2) {
+        return num1;
+      } else if (num1 < num2){
+        return num2;
+      } else if (num1 = num2) {
+        return `${num1} is equal to ${num2}`
+      }
+    }
+    console.log(max(6, 6));
+
+    // 3
+    function isMultipleOf(a, b) {
+      if (a % b === 0) {
+        return `true`;
+      } else if(b % a === 0){
+        return `true`;
+      }
+      else {return `false`}
+    }
+
+    console.log(isMultipleOf(3, -567357));
+
+    // // 4
+    // function countVowels(word){
+    //   if (includes(a, e, i, o, u)){
+    //     return `yes`;
+    //   }
+    // }
+    // console.log(countVowels('hello'));
+    // i havent learned these includes() or indexof()
+
+    // 5
+     function reverseString(str){
+      return str.split('').reverse().join('');
+     }
+
+     console.log(reverseString('my name is bill gates'));
+    //  i searched how to reverse a string on google i didnt know these split, reverse. join
+
+    //  6
+     function gradeScore(score){
+      if (score >= 90){
+        return `A`;
+      } else if (score >= 80 && score < 90){
+        return `B`;
+      } else if (score >= 70 && score < 80){
+        return `C`;
+      } else if (score >= 0 && score < 70){
+        return `F`;
+      } 
+     }
+       console.log(gradeScore(69.9));
+    //  idk why this is not giving anything in the console.
+
+    // 7
+    function isLeapYear(year){
+      if (year % 4 === 0) {
+        return `Leap Year`;
+      } else {return `Not a Leap Year`};
+    }
+    console.log(isLeapYear(2004));
+
+    // 8
+    function toTitleCase(word){
+      return word.toLowerCase();
+    }
+    console.log(toTitleCase('ShaN, MaRyAm'));
+    // idk how to do this i havent learned this too
+
+    // 9
+    // why havent i learned to do these in the course?
+
+    // 10
+    // i dont know how to these so many, why havent i learned these in the course? i dont know any of these i have to google all of them
+  </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body{
+      background-color: gray;
+    }
+  </style>
+</head>
+<body>
+  <input placeholder="Type anything" class="js-input" onkeydown="
+      const inputElement = document.querySelector('.js-input');
+      document.querySelector('.js-output')
+        .innerHTML = inputElement.value;
+    ">
+  <p class="js-output"></p>
+  <script>
+   
+
+  </script>
+</body>
+</html>
+
+<!-- my version
+<body>
+  <input class="js-input" onkeyup="
+      displayText();
+    ">
+  <p class="js-output"></p>
+  <script>
+    function displayText(){
+      const inputElement = document.querySelector('.js-input').value;
+      document.querySelector('.js-output')
+        .innerHTML = inputElement;
+    }
+
+  </script>
+-->

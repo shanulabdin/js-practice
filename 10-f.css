@@ -1,0 +1,19 @@
+
+    body{
+      background-color: gray;
+      font-family: Arial;
+    } 
+
+    .button {
+      background-color: rgb(230, 230, 230);
+      border: none;
+      padding: 6px 12px;
+      border-radius: 4px;
+      cursor: pointer;
+
+    }
+
+    .is-toggled{
+      background-color: black;
+      color: white;
+    }

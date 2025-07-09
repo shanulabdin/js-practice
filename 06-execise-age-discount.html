@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // // my solution
+    // const age = Math.floor(Math.random()*120);
+    // let holiday = false;
+    // let discount = '';
+
+    // if
+    // ((age <= 6 || age >= 65) && !holiday)
+    // {discount = 'Discount'}
+    
+    // else
+    // {discount = 'No Discount.'}
+    // console.log(`${age}, ${holiday}, ${discount}`);
+
+    // // simons solution
+    // const age1 = 5;
+    //   const isHoliday = true;
+
+    //   if ((age1 <= 6 || age1 >= 65) && !isHoliday) {
+    //     console.log('Discount');
+    //   } else {
+    //     console.log('No discount');
+    //   }
+
+    // My try
+    const age = Math.floor(Math.random()*100);
+    const isHoliday = Math.random() < 0.5;
+    let discount = '';
+
+    if
+    ((age <= 6 || age >= 65) && !isHoliday)
+    {discount = 'Available'}
+
+    else
+    {discount = 'Not Available'};
+    console.log(`${age}, ${isHoliday ? 'yes' : 'no'}, ${discount}.`)
+  </script>
+</body>
+</html>

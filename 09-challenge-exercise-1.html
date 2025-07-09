@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body{
+      background-color: gray;
+     
+    }
+  </style>
+  <title>Document</title>
+</head>
+<body>
+  
+   <p>Amazon Shipping Calculator</p>
+
+  <input class="js-cost-input" placeholder="Cost of order" onkeydown="
+    handleCostKeydown(event)
+    
+  ">
+
+  <button onclick="
+    totalCost()
+  ">Calculate</button>
+
+  <p class="js-total-cost"></p>
+
+  <script>
+    function handleCostKeydown(event){
+    if(event.key === 'Enter'){
+    totalCost();
+    }
+  }
+
+  function totalCost(){
+    const inputElement = document.querySelector('.js-cost-input');
+  let cost = Math.round(Number(inputElement.value * 100));
+
+  if(cost < 4000){
+    cost = cost + 1000;
+  }
+  document.querySelector('.js-total-cost')
+    .innerHTML = `$${(cost / 100).toFixed(2)}`;
+  console.log(cost);
+  } 
+  </script>
+  
+   
+</body>
+</html>

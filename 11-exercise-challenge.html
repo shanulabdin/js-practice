@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+        background-color: gray;
+
+      }
+  </style>
+</head>
+<body>
+  <script>
+
+    const groceries = [
+    { name: 'Milk', price: 100 },
+    { name: 'Bread', price: 80 },
+    { name: 'Eggs', price: 150 },
+    { name: 'Rice', price: 200 }
+    ];
+
+    let total = 0;
+
+    for (let i = 0; i < groceries.length; i++){
+
+      console.log(groceries[i].name + ": Rs." + groceries[i].price);
+      total = total + groceries[i].price;
+    }
+
+    console.log("Total: " + total);
+
+  </script>
+</body>
+</html>

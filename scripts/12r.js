@@ -36,7 +36,10 @@ function resetScore(){
   updateScoreElement();
 }
 
-
+document.querySelector('.js-reset-score-button')
+  .addEventListener('click', () => {
+    showConfirmation();
+  });
 
 function autoPlay(){
   if (!isAutoPlaying){
@@ -95,7 +98,7 @@ document.body.addEventListener('keydown', (event) => {
   } else if (event.key === 'a'){
     autoPlay();
   } else if (event.key === 'Backspace'){
-    showResetConfirmation();
+    showConfirmation();
   }
 });
 
@@ -175,38 +178,31 @@ function pickComputerMove() {
   return computerMove;
 }
 
-document.querySelector('.js-reset-score-button')
-  .addEventListener('click', () => {
-    showResetConfirmation();
-  })
-
-function showResetConfirmation(){
+function showConfirmation(){
   document.querySelector('.js-reset-confirmation')
     .innerHTML = `
-      Are you sure you want to reset the score?
-      <button class="js-reset-confirm-yes reset-confirm-button">
+      Are you sure you want to reset score?
+      <button class="js-reset-button-yes">
         Yes
       </button>
-      <button class="js-reset-confirm-no reset-confirm-button">
+      <button class="js-reset-button-no">
         No
       </button>
     `;
 
-  document.querySelector('.js-reset-confirm-yes')
-  .addEventListener('click', () => {
-    resetScore();
-    hideResetConfirmation()
-  });
+    document.querySelector('.js-reset-button-yes')
+      .addEventListener('click', () => {
+        resetScore();
+        hideConfirmation()
+      });
 
-  document.querySelector('.js-reset-confirm-no')
-  .addEventListener('click', () => {
-    hideResetConfirmation();
-  });
-}
+      document.querySelector('.js-reset-button-no')
+      .addEventListener('click', () => {
+        hideConfirmation();
+      });
+};
 
-
-
-function hideResetConfirmation(){
+function hideConfirmation(){
   document.querySelector('.js-reset-confirmation')
     .innerHTML = '';
-}
+};

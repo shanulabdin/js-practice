@@ -18,7 +18,6 @@ let race;
 console.log(race);
 
 console.log(greeting + ', My name is ' + name + ", and I'm " + age + ' years old.');
-// _____________
 
 // math
 // area of rectangle:

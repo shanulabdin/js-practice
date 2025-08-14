@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // // functions practice
+    // // 1
+    // function greet(friend){
+    //   console.log('hello, ' + friend + '!')
+    // }
+    // greet('Shan');
+    // // tell me if this is correct way to write, like adding + between string and function
+
+    // // 2
+    // function logName(name){
+    //   console.log(name)
+    // }
+    // logName('Alex');
+
+    // // 3
+    // function addition(num1, num2){
+    //   console.log(num1 + num2);
+    // }
+    // addition(5, 7);
+
+    // // 4
+    // // i think i did it already in exercise 3? right? was i supposed to do something differnt?
+
+    // // 5
+    // function multiply(no1, no2){
+    //   return no1 * no2;
+    // }
+    // let result = multiply(4, 4);
+    // console.log(result);
+    // // i forgot how they work so i peeked from what i practiced yeterday
+
+    // // 6
+    // function seconds(min){
+    //   return min * 60
+    // }
+    // let answer = seconds(2);
+    // console.log(answer);
+
+    // // 7
+    // function evenOdd(number){
+    //   if (number % 2 === 0) {
+    //     return 'even';
+    //   } else {
+    //     return 'odd';
+    //   }
+    // } 
+    // let evenOrOdd = evenOdd(4);
+    // console.log(evenOrOdd);
+    // // i just experimented and it worked, can you make me understand how this part works? : number % 2 === 0
+
+    // // 8
+    // function fullName(first, last){
+    //   console.log(`${first} ${last}`);
+    // }
+    // fullName('Chris', 'Hemsworth');
+
+    // // 9
+    // function subtract(n1, n2){
+    //   console.log(n1 - n2);
+    // }
+    // subtract(7, 5);
+    // // idk if i ubderstand your question fully
+
+    // // 10
+    // function square(numb){
+    //   console.log(numb * numb);
+    // }
+    // square(5)
+
+  //   // objects practice 
+  //   // 1
+  //   info = {
+  //     name: 'Shan',
+  //     age: 20,
+  //     country: 'Pakistan'
+  //   }
+  //   console.log(info);
+
+  //   // 2
+  //   console.log(info.age);
+
+  //   // 3
+  //   info.hobby = 'Coding';
+  //   console.log(info);
+
+  //   // 4
+  //   info.age = 22
+  //   console.log(info);
+
+  //   // 5
+  //   book = {
+  //     title: 'Sapiens',
+  //     author: 'Harari',
+  //     year: 2011
+  //   }
+  //   console.log(book.title);
+
+  //   // 6
+  //   function describePerson(personObj){
+  //     console.log(`My name is ${info.name} and I am ${info.age} years old.`);
+  //   }
+  //   describePerson();
+
+  //   // // 7
+  //   const car = {
+  //     drive: function() {
+  //       console.log('The car is driving');
+  //     }
+  //   };
+  //   car.drive();
+
+  //   // i dont understand thiss
+
+  //   // 8
+  //   maths = {
+  //     numb1: 3,
+  //     numb2: 3,
+  //     sum: function(numb1, numb2){
+  //       return this.numb1 + this.numb2;
+  //     }
+  // };
+  //   console.log(maths);
+  //   console.log(maths.sum()); 
+
+  //   // 9
+  //   person = {
+  //     age: 18,
+  //     adult:  function isAdult(person) {
+  //       if (this.age >= 18){
+  //         return true;
+  //       } else {
+  //         return false;
+  //       }
+  //   }
+  // };  
+  //   console.log(person.adult());
+
+  //   // 10
+  //   grades = {
+  //     name: 'Shan',
+  //     details: {
+  //       class: 13,
+  //       grade: 'A',
+  //     }
+  //   };
+  //   console.log(grades.details.grade);
+
+  // // 1
+  // const student = {
+  //   name: 'Shan',
+  //   marks: 5,
+  //   hasPassed: function(){
+  //     return this.marks >= 50;
+  //   }
+  // };
+  // console.log(student.hasPassed());
+
+  // // // 2
+  // // const bankAccount = {
+  // //   balance: 1000,
+  // //   desopit: function(depositAmount){
+  // //     this.balance = this.balance + depositAmount;
+  // //     return this.balance;
+  // //   },
+  // //   withdraw: function(withdrawAmount){
+  // //     if (withdrawAmount > this.balance){
+  // //       return 'not enough balance';
+  // //     } else {
+  // //       this.balance = this.balance - withdrawAmount;return this.balance;
+  // //     };
+      
+  // //   }
+    
+  // // };
+  // // console.log(bankAccount.desopit(500));
+  // // console.log(bankAccount.withdraw(1000));
+  // // console.log(bankAccount.withdraw(600));
+
+  // // 2 by heart
+  // const bankAccount = {
+  //   balance: 1000,
+  //   deposit: function(depositAmount){
+  //     this.balance += depositAmount;
+  //     return this.balance;
+  //   },
+  //   withdraw: function(withdrawAmount){
+  //     if (withdrawAmount > this.balance){
+  //       return `Balance is not enough`;
+  //     } else {
+  //       this.balance = this.balance - withdrawAmount;
+  //     return this.balance;
+  //     }
+      
+  //   }
+  // };
+  // console.log(bankAccount.deposit(500));
+  // console.log(bankAccount.withdraw(1000));
+  // console.log(bankAccount.withdraw(1000));
+
+  // // 3
+  // const weather = {
+  //   temperature: 25,
+  //   unit: 'C',
+  //   humidity:  71 + '%',
+  //   feelslike: function(){
+  //     if (this.temperature > 30){
+  //       return 'Hot';
+  //     } else if (this.temperature < 10){
+  //       return 'Cold';
+  //     } else {
+  //       return 'Moderate';
+  //     }
+  //   }
+  // };
+  // console.log(weather);
+  // console.log(weather.humidity);
+  // console.log(weather.feelslike());
+
+  // // 4
+  // const profile = {
+  //   username: '@shan',
+  //   followers: 1400,
+  //   following: 8,
+  //   getPopularity: function(){
+  //     if (this.followers > this.following){
+  //       return 'Influencer';
+  //     } else {
+  //       return 'Casual user';
+  //     }
+  //   }
+  // };
+  // console.log(profile);
+  // console.log(profile.getPopularity());
+
+  // // 5
+  // const calculator = {
+  //   add(num1, num2){
+  //     return num1 + num2;
+  //   },
+  //   subtract(num1, num2){
+  //     return num1 - num2; 
+  //   },
+  //   multiply(num1, num2){
+  //     return num1 * num2; 
+  //   },
+  //   divide(num1, num2){
+  //     return num1 / num2; 
+  //   },
+    
+  // };
+  // console.log(calculator.add(3, 2));
+  // console.log(calculator.subtract(3, 2));
+  // console.log(calculator.multiply(3, 2));
+  // console.log(calculator.divide(3, 2));
+  
+  // // 1
+  // const movieRating = {
+  //   title: 'Dune',
+  //   rating: 7,
+  //   isHit(){
+  //     if (this.rating >= 7){
+  //       return 'Hit';
+  //     } else {
+  //       return 'Flop';
+  //     }
+  //   }
+  // };
+  // console.log(movieRating.isHit());
+  // // tell me if its ok to leave the brackets of a function empty like isHIt()?
+
+  // // 2
+  // const shoppingCart = {
+  //   items: 5,
+  //   pricePerItem: 20,
+  //   total() {
+  //     return this.items * this.pricePerItem;
+  //   },
+  //   addItems(count){
+  //     return this.items += count;
+  //   },
+  //   subtractItems(count){
+  //     return this.items -= count;
+  //   }
+  // };
+  // console.log(shoppingCart);
+  // console.log(shoppingCart.total());
+  // console.log(shoppingCart.addItems(3));
+  // console.log(shoppingCart.total());
+  // console.log(shoppingCart.subtractItems(2));
+  // console.log(shoppingCart.total());
+  // // am i missing something? should i make the items tell the total price after the addition or subtraction of new items?
+
+  // // 3
+  // const loginSystem = {
+  //   username: '@shan',
+  //   password: 'shan123',
+  //   login(inputPassword){
+  //     if (inputPassword === this.password) {
+  //       return 'Access Granted';
+  //     } else {
+  //       return 'Wrong Password'
+  //     }
+  //   }
+  // };
+  // // loginSystem(inputPassword('shan321')); how do you write this? i always get stuck in this
+  // console.log(loginSystem.login('shan123'));
+
+  // // 1
+  // const libraryBook = {
+  //   title: 'Dune',
+  //   author: 'Frank Herbert',
+  //   copies: 20,
+  //   borrow(borrowBook){
+  //     if (this.copies === 0) {
+  //       return 'no copies left';
+  //     } else if (this.copies < borrowBook) {
+  //       return 'Not Enough copies available!';
+  //     } else {
+  //       return this.copies -= borrowBook;  
+  //     }
+
+  //   },
+  //   return(returnBook){
+  //     return this.copies += returnBook;
+  //   }
+  // };
+
+  // console.log(libraryBook);
+  // console.log(libraryBook.borrow(20));
+  //   console.log(libraryBook.borrow(2));
+  // console.log(libraryBook.return(4));
+  //   console.log(libraryBook);
+  
+
+  // // 2
+  // let inventoryItem = {
+  //   name: 'screwdriver',
+  //   stock: 15,
+  //   price: 150,
+  //   sell(quantity){
+  //     if (this.stock === 0){
+  //       return 'Sorry, No Screwdrivers left!'
+  //     } else if (this.stock < quantity){
+  //       return `sorry, only ${this.stock} items left`;
+  //     } else if (this.stock >= quantity){
+  //       this.stock -= quantity
+  //       return `Total: ${this.price * quantity} RS`
+  //     }
+      
+  //   },
+  //   restock(quantity){
+  //     this.stock += quantity;
+  //     return `${quantity} items added, stock: ${this.stock}`;
+  //     }
+  // };
+  // console.log(inventoryItem);
+  // console.log(inventoryItem.sell(5));
+  // console.log(inventoryItem.restock(6));
+  // console.log(inventoryItem);
+
+  // // 2 by heart
+  // const inventoryItem = {
+  //   name: 'Screwdriver',
+  //   stock: 15,
+  //   price: 150,
+  //   sell(quantity){
+  //     if (this.stock === 0) {
+  //       return `Sorry, no screwdrivers left!`;
+  //     } else if (this.stock < quantity){
+  //       return 'Sorry, only X items left';
+  //     } else if (this.stock >= quantity){
+  //       this.stock -= quantity;
+  //       return 'Total: ' + this.price * quantity + ' RS'; 
+  //     }
+  //   },
+  //   reStock(quantity){
+  //     this.stock += quantity;
+  //     return quantity + ' Items added to stock.'
+  //   }
+  // };
+  // console.log(inventoryItem);
+  // console.log(inventoryItem.sell(2));
+  // console.log(inventoryItem.reStock(7));
+  // console.log(inventoryItem);
+
+//   // bakery
+// const cupcakeShop = {
+//   flavor: 'Chocolate',
+//   stock: 9,
+//   price: 50,
+//   sell(quantity){
+//     if (this.stock === 0) {
+//       return "Sorry, cupcakes sold out!";
+//     } else if (this.stock < quantity) {
+//       return "Sorry, only" + this.stock + "cupcakes left!";
+//     } else if (this.stock >= quantity){
+//       this.stock -= quantity;
+//       return "Total: " + quantity * this.price + " Rs"
+//     }
+//   },
+//   restock(quantity){
+//     this.stock += quantity;
+//     return quantity + ' Cupcakes added'
+//   }
+// };
+// console.log(cupcakeShop);
+// console.log(cupcakeShop.sell(3));
+// console.log(cupcakeShop);
+// console.log(cupcakeShop.restock(3));
+// console.log(cupcakeShop);
+
+// soap Shop
+const soapShot = {
+  stock: 6,
+  price: 10,
+  sell(quantity){
+    if (this.stock === 0){
+      return 'No Soaps Left!';
+    } else if (this.stock < quantity){
+      return 'Not Enough Soaps';
+    } else {
+      this.stock -= quantity;
+      return 'Total: ' + (this.price * quantity) + ' RS';
+    }
+  },
+  restock(quantity){
+    this.stock += quantity;
+    return quantity + ' Soaps added to stock';
+  }
+};
+console.log(soapShot);
+console.log(soapShot.sell(6));
+console.log(soapShot);
+console.log(soapShot.sell(6));
+console.log(soapShot.restock(3));
+console.log(soapShot);
+  </script>
+</body>
+</html>

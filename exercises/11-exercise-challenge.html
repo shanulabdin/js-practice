@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+        background-color: gray;
+
+      }
+  </style>
+</head>
+<body>
+  <script>
+
+    // const groceries = [
+    // { name: 'Milk', price: 100 },
+    // { name: 'Bread', price: 80 },
+    // { name: 'Eggs', price: 150 },
+    // { name: 'Rice', price: 200 }
+    // ];
+
+    // let total = 0;
+
+    // for (let i = 0; i < groceries.length; i++){
+
+    //   console.log(groceries[i].name + ": Rs." + groceries[i].price);
+    //   total = total + groceries[i].price;
+    // }
+
+    // console.log("Total: " + total);
+
+    const cart = [
+      { name: 'Shirt', price: 1200, quantity: 2 },
+      { name: 'Jeans', price: 2000, quantity: 1 },
+      { name: 'Cap', price: 500, quantity: 3 }
+    ];
+
+    let originalTotal = 0;
+
+    for(let i = 0; i < cart.length; i++){
+
+      console.log(cart[i].name + " (x"  + cart[i].quantity + "): " + (cart[i].price * cart[i].quantity));
+
+      originalTotal = originalTotal + cart[i].price * cart[i].quantity
+
+    } 
+
+    let discount = 0;
+    if (originalTotal > 5000){
+      discount = originalTotal * 0.10;
+    }
+
+    let finalTotal = originalTotal - discount;
+
+    console.log("Original Total: " + originalTotal);
+    console.log("Discount: " + discount);
+    console.log("Final Total: " + finalTotal);
+  
+  </script>
+</body>
+</html>

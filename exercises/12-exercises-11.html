@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>App</title>
+  </head>
+  <body>
+    <button class="js-button">Add</button>
+    <button class="js-button-2">Remove</button>
+
+    <script>
+      let messages = 2;
+
+      document.querySelector('.js-button')
+        .addEventListener('click', () => {
+          messages++;
+        });
+
+      document.querySelector('.js-button-2')
+        .addEventListener('click', () => {
+          messages--;
+        })
+      setInterval(() => {
+        if (document.title === 'App') {
+          document.title = `(${messages}) New messages`;
+        } else {
+          document.title = 'App';
+        }
+      }, 1000);
+    </script>
+  </body>
+</html>

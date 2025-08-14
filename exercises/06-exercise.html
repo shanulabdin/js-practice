@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Greetings</title>
+</head>
+<body>
+  <script>
+    /*practice*/
+    const randomHour = Math.floor(Math.random() * 24);
+
+    const name = 'Shan';
+
+    let greeting = '';
+
+    if 
+    (randomHour >= 6 && randomHour < 12)
+    {greeting = 'Good Morning,'}
+
+    else if 
+    (randomHour >= 13 && randomHour < 17)
+    {greeting = 'Good Afternoon,'}
+
+    else
+    (greeting = 'Good Night,')
+
+    console.log(`Time: ${randomHour} O Clock. ${greeting} ${name}!`);
+    
+
+    /* Out of my Mind */
+    const hour2 = Math.floor(Math.random()*24);
+    let greeting2 = '';
+    let name2 = 'Shan';
+
+    if
+    (hour2 >= 6 && hour2 < 12)
+    {greeting2 = 'Good morning'}
+
+    else if
+    (hour2 >= 13 && hour2 < 17)
+    {greeting2 = 'Good Afternoon'}
+
+    else
+    {greeting2 = 'Good night'}
+
+    console.log(`Hour: ${hour2},  ${greeting2}, ${name2}!`);
+  </script>
+</body>
+</html>

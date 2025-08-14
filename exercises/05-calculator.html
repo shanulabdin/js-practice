@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+  <style>
+    body {
+      margin: 10px;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      background-color: #303030;
+      padding: 0px;
+    }
+
+    button {
+      padding: 10px 15px;
+      margin: 5px;
+      border-radius: 16px;
+      font-size: 16px;
+      font-weight: 400;
+      border: none;
+      outline: none;  
+      cursor: pointer;
+      color: white;
+      background-color: #464646;
+    }
+
+    button:hover {
+      background-color: #131313;
+      border: none;
+      outline: none;
+    }
+    p {
+      margin: 0px 0;
+    }
+
+    .math {
+      background-color: #ff7300;
+    }
+  </style>
+  <head>
+    <title>
+      Calculator
+    </title>
+  </head>
+
+  <body>
+
+    <p>
+      <button onclick = "
+      calculation += '1'
+      console.log(`= ${calculation}`);
+      ">1</button>
+
+      <button onclick = "
+      calculation += '2'
+      console.log(`= ${calculation}`);
+      ">2</button>
+
+      <button onclick = "
+      calculation += '3'
+      console.log(`= ${calculation}`);
+      ">3</button>
+
+      <button class="math" onclick = "
+      calculation += '+'
+      console.log(`= ${calculation}`);
+      ">+</button>
+    </p>
+
+    <p>
+      <button onclick = "
+      calculation += '4'
+      console.log(`= ${calculation}`);
+      ">4</button>
+
+      <button onclick = "
+      calculation += '5'
+      console.log(`= ${calculation}`);
+      ">5</button>
+
+      <button onclick = "
+      calculation += '6'
+      console.log(`= ${calculation}`);
+      ">6</button>
+
+      <button class="math" onclick = "
+      calculation += '-'
+      console.log(`= ${calculation}`);
+      ">-</button>
+    </p>
+    </p>
+
+    
+    <p>
+      <button onclick = "
+      calculation += '7'
+      console.log(`= ${calculation}`);
+      ">7</button>
+
+      <button onclick = "
+      calculation += '8'
+      console.log(`= ${calculation}`);
+      ">8</button>
+
+      <button onclick = "
+      calculation += '9'
+      console.log(`= ${calculation}`);
+      ">9</button>
+
+      <button class="math" onclick = "
+      calculation += '*'
+      console.log(`= ${calculation}`);
+      ">*</button>
+    </p>
+
+    <p>
+      <button onclick = "
+      calculation += '0'
+      console.log(`= ${calculation}`);
+      ">0</button>
+
+      <button onclick = "
+      calculation += '.'
+      console.log(`= ${calculation}`);
+      ">.</button>
+
+      <button onclick ="
+      calculation = eval(calculation);
+      console.log(`= ${calculation}`);
+    ">=</button>
+
+    <button class="math" onclick = "
+      calculation += '/'
+      console.log(`= ${calculation}`);
+      ">/</button>
+    </p>
+
+    <p>
+      
+    </p>
+  </body>
+
+  <p>
+    <button onclick="
+        calculation='';
+        console.log(`= 0${calculation}`);
+      ">Clear</button>
+  </p>
+  <script>
+    let calculation = '';
+    
+  </script>
+</html>

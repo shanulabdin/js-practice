@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body{
+      background-color: gray;
+    }
+  </style>
+</head>
+<body>
+  
+
+    <script>
+      const studentGrades = [
+      student = {
+        name: 'Shan',
+        grades: [50, 60, 70],
+        average(){
+          return calculateAverage(this);
+        },
+        status(){
+          return gradeStatus(this);
+        }  
+      }, student2 = {
+        name: 'Sara',
+        grades: [40, 50, 60],
+        average(){
+          return calculateAverage(this);
+        },
+        status(){
+          return gradeStatus(this);
+        }
+      }, student3 = {
+        name: 'Alex',
+        grades: [30, 40, 50],
+        average(){
+          return calculateAverage(this);
+        },
+        status(){
+          return gradeStatus(this);
+        }
+      }
+
+    ]
+      
+      function calculateAverage(student){
+        const averageGrade = (student.grades[0] + student.grades[1] + student.grades[2]) / 3;
+          return averageGrade;
+      }
+
+      function gradeStatus(student){
+        const isPass = student.average();
+          if (isPass >= 60){
+            return 'Pass';
+          } else if (isPass < 60){
+            return 'Fail';
+          }
+      }
+      
+      console.log(student);
+      console.log(student.average());
+      console.log(student.status());
+
+      console.log(student2);
+      console.log(student2.average());
+      console.log(student2.status());
+
+      console.log(student3);
+      console.log(student3.average());
+      console.log(student3.status());
+
+      </script>
+</body>
+</html>

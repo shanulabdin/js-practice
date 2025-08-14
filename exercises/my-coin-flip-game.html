@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coin Flip Game</title>
+  <style>
+    body{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      background-color: gray;
+      height: 100vh;
+      margin: 0;
+    }
+    
+    button {
+      background-color: rgb(199, 199, 199);
+      color: rgb(7, 7, 7);
+      border: none;
+      border-radius: 20%;
+      height: 150px;
+      width: 150px;
+      aspect-ratio: 1 / 1;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-weight: 500;
+      font-size: 35px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0; /* remove giant spacing */
+      margin-bottom: 175px;
+      transition: 0.2s;
+      cursor: pointer;
+      flex: 1;
+
+    }
+
+    button:hover{
+      background-color: rgb(255, 123, 0);
+      transform: scale(1.1);
+    }
+
+    #buttons{
+      display: flex;
+      gap: 20px;
+    }
+
+    .botMove{
+      background-color: rgb(199, 199, 199);
+      color: rgb(7, 7, 7);
+      border: none;
+      border-radius: 20%;
+      height: 150px;
+      width: 150px;
+      aspect-ratio: 1 / 1;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-weight: 500;
+      font-size: 35px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0; /* remove giant spacing */
+      margin-top: 175px;
+      /* transition: 0.2s; */
+      cursor: pointer;
+      flex: 1;
+    }
+    /* .botMove:hover{
+      background-color: rgb(255, 123, 0);
+      transform: scale(1.1);
+    } */
+
+    #score{
+      background-color: none;
+      color: rgb(7, 7, 7);
+      border: none;
+      border-radius: 20%;
+      height: 100px;
+      width: 150px;
+      aspect-ratio: 1 / 1;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-weight: 500;
+      font-size: 35px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 20px; /* remove giant spacing */
+      /* transition: 0.2s; */
+      cursor: pointer;
+      flex: 1;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <div id="computerMove" class="botMove"></div>
+  </div>
+  <div id="score" ></div>
+  <div id="buttons">
+      <button onclick="
+        const randomNumber = Math.random();
+
+        let botMove = randomNumber > 0.5 ? 'Heads' : 'Tails';
+
+        let result = '';
+
+        const guess = 'Heads';
+
+        if
+        (guess === botMove)
+        {result = 'You Win.'}
+        else
+        {result = 'You Lose.'}
+
+        document.getElementById('computerMove').innerText = `${botMove}`
+        console.log(`Guess: ${guess}`)
+        document.getElementById('score').innerText = `${result}`
+      ">Heads</button>
+
+     <button onclick="
+      const randomNumber2 = Math.random();
+
+        let botMove2 = randomNumber2 > 0.5 ? 'Heads' : 'Tails';
+
+        let result2 = '';
+
+        const guess2 = 'Tails';
+
+        if
+        (guess2 === botMove2)
+        {result2 = 'You Win.'}
+        else
+        {result2 = 'You Lose.'}
+
+        document.getElementById(`computerMove`).innerText = `${botMove2}`
+        console.log(`Guess: ${guess2}`)
+        document.getElementById('score').innerText =  `${result2}`
+      ">Tails</button>
+  </div>
+  
+
+  <script>
+    
+  </script>
+</body>
+</html>

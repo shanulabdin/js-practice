@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      background-color: gray;
+      font-family: Arial;
+
+      
+    }
+
+    p {
+      font-size: 25px;
+      font-weight: 300;
+      color: white;
+      margin-top: 50px;
+    }
+
+    .amazon-button {
+      background-color: rgb(255, 216, 20);
+      font-size: 20px;
+      border: none;
+      padding: 8px 48px;
+      border-radius: 24px;
+      cursor: pointer;
+
+    }
+
+    .request-button {
+      background-color: black;
+      color: white;
+      font-weight: bold;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 6px;
+      margin-right: 10px;
+    }
+    
+    .schedule-button {
+      background-color: rgb(230, 230, 230);
+      color: black;
+      font-weight: bold;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 6px;
+
+    }
+
+
+  </style>
+</head>
+<body>
+  <p>Amazon Button:</p>
+  <button class="amazon-button">Add to cart</button>
+  <p>Uber Buttons:</p>
+  <button class="request-button">Request now</button>
+  <button class="schedule-button">Schedule for later</button>
+
+  <p></p>
+  <button class="js-button">test</button>
+
+  <script>
+    console.log(document.querySelector('.js-button')
+      .classList.contains('js-button'));
+  </script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>12d - 12e exercises</title>
+  <style>
+    body{
+      background-color: gray;
+      font-family: Arial;
+    }
+  </style>
+</head>
+<body>
+  <button onclick="
+      updateButton()
+  "class="js-timer-button">Start</button>
+  <p></p>
+  <button onclick="
+    displayMessage()
+  " class="js-cart-button">Add to cart</button>
+  <p class="js-add-button"></p>
+  <script>
+    let timeoutId;
+
+    function displayMessage(){
+      const addButton = document.querySelector('.js-add-button');
+      addButton.innerHTML = 'Added';
+
+      clearTimeout(timeoutId);
+
+      timeoutId = setTimeout(function(){
+        addButton.innerHTML = '';
+      }, 2000)
+    console.log(timeoutId)
+    }
+    
+
+    function updateButton(){
+      const button = document.querySelector('.js-timer-button');
+
+      button.innerHTML = 'Loading...';
+
+      setTimeout(function(){
+        button.innerHTML = 'Finished'
+      }, 1000)
+    }
+
+  </script>
+
+</body>
+</html>

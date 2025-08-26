@@ -27,7 +27,7 @@ let length = 2;
 const rectArea = width * length;
 console.log(rectArea);
 
-// area of triangle
+// area of circle
 let pie = 3.14159;
 let radius = 5;
 

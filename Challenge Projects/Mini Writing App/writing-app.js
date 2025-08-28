@@ -8,6 +8,8 @@ const loginPage = document.getElementById('login-page');
 // writing page
 const writingPage = document.getElementById('writing-page');
 const textArea = document.getElementById('text-area');
+const counter = document.getElementById('counter');
+const warning = document.getElementById('warning');
 
 writingPage.style.display = 'none';
 
@@ -23,8 +25,19 @@ form.addEventListener('submit', (event) => {
     alert('Username is Incorrect');
   } else {
     alert('Password and Username are Incorrect');
-    isLogged = false;
   }  
-
+  
 });
 
+
+textArea.addEventListener('input', () => {
+  let wordCount = textArea.value.length;
+  counter.textContent = `Counter ${wordCount} / 25.`
+
+  if(wordCount > 25){
+    counter.style.color = '#ac0000ff';
+  } else {
+    counter.style.color = 'black';
+
+  }
+})

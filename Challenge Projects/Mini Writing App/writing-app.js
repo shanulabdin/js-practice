@@ -30,7 +30,7 @@ form.addEventListener('submit', (event) => {
 });
 
 
-textArea.addEventListener('input', () => {
+textArea.addEventListener(('input', 'keydown'), (event) => {
   let wordCount = textArea.value.length;
   counter.textContent = `Counter ${wordCount} / 25.`
 
@@ -38,6 +38,48 @@ textArea.addEventListener('input', () => {
     counter.style.color = '#ac0000ff';
   } else {
     counter.style.color = 'black';
-
   }
-})
+
+
+  if (event.key === 'Enter' && wordCount > 25){
+    alert(`Note can not be longer than 25 characters`)
+  } else if (event.key === 'Enter' && wordCount < 1){
+    alert(`Note can not be empty`);
+  } else if(event.key === 'Enter'){
+    createNote();
+    event.preventDefault();
+  } 
+});
+
+
+// note page
+const notePage = document.getElementById('note-page');
+const noteList = document.getElementById('note-list');
+const saveButton = document.getElementById('save-button');
+const search = document.getElementById('search');
+
+loginPage.style.display = 'none';
+writingPage.style.display = 'block';
+
+saveButton.addEventListener('click', () => {
+  createNote()
+});
+
+function createNote(){
+  const li = document.createElement('li');
+  li.textContent = textArea.value;
+  textArea.value = '';
+  
+  noteList.appendChild(li);
+}
+;
+
+search.addEventListener('input', () => {
+  const searchText = search.value.toLowerCase();
+  const notes = document.querySelectorAll('#note-list li');
+  
+  notes.forEach(note => {
+    const match = note.textContent.toLowerCase().includes(searchText);
+    note.style.display = match ? 'block' : 'none'
+  });  
+});

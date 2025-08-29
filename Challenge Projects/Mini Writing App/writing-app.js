@@ -83,3 +83,18 @@ search.addEventListener('input', () => {
     note.style.display = match ? 'block' : 'none'
   });  
 });
+
+
+const body = document.body;
+const displayText = document.getElementById('display-text');
+
+
+body.addEventListener('keydown', (event) => {
+  const displayKey = event.key;
+  displayText.textContent = displayKey
+
+  const randomNum = 30 + Math.floor(Math.random() * 40);
+  const randomColor = `hsl(0 0 ${randomNum}%)`
+
+  displayText.style.backgroundColor = randomColor;
+})

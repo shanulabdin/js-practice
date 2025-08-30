@@ -58,8 +58,6 @@ const noteList = document.getElementById('note-list');
 const saveButton = document.getElementById('save-button');
 const search = document.getElementById('search');
 
-loginPage.style.display = 'none';
-writingPage.style.display = 'block';
 
 saveButton.addEventListener('click', () => {
   createNote()
@@ -80,7 +78,7 @@ search.addEventListener('input', () => {
   
   notes.forEach(note => {
     const match = note.textContent.toLowerCase().includes(searchText);
-    note.style.display = match ? 'block' : 'none'
+    note.style.display = match ? '' : 'none'
   });  
 });
 

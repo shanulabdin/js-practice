@@ -14,26 +14,72 @@
 <body>
   
   <script>
-    while (true) {
-      const input = Number(prompt('Enter a number:'));
+    // 1
+    // while (true) {
+    //   const input = Number(prompt('Enter a number:'));
 
-      if (input % 2 === 0) {
-        alert('✅ You entered an Even Number: ' + input);
-      } else {
-        alert('✅ You entered an Odd Number: ' + input);
+    //   if (input % 2 === 0) {
+    //     alert('✅ You entered an Even Number: ' + input);
+    //   } else {
+    //     alert('✅ You entered an Odd Number: ' + input);
+    //   }
+
+    //   // if (!isNaN(input)) {
+    //   //   // valid number → break out of the loop
+    //   //   alert('❌ That is not a valid number. Try again!');
+    //   // }
+
+    //   const again = confirm('Do you want to check another number?');
+    //   if(!again){
+    //     alert('GoodBye!');
+    //     break;
+    //   }
+    // }
+
+    // 2
+
+    let program = true;
+    let grades = [];
+    let sum = 0;
+    let average = 0;
+
+    while(program){
+
+      const score = Number(prompt('Enter the test score:'));
+      
+
+      if(score >= 90 && score <= 100){
+        alert('A grade');
+        grades.push(score);
+      } else if (score >= 80 && score < 90){
+        alert('B grade');
+        grades.push(score);
+      } else if (score >= 70 && score < 80){
+        alert('C grade');
+        grades.push(score);
+      } else if (score >= 60 && score < 70){
+        alert('D grade');
+        grades.push(score);
+      } else if (score >= 0 && score < 60){
+        alert('F grade');
+        grades.push(score);
+      } else if (isNaN(score) || score < 0 || score > 100){
+        alert('Please enter a valid number between 0 and 100');
       }
 
-      // if (!isNaN(input)) {
-      //   // valid number → break out of the loop
-      //   alert('❌ That is not a valid number. Try again!');
-      // }
 
-      const again = confirm('Do you want to check another number?');
-      if(!again){
-        alert('GoodBye!');
-        break;
-      }
+
+      sum = grades.reduce((acc, crr) => acc + crr, 0);
+      average = sum / grades.length;
+
+      console.log('grades:', grades, 'sum:', sum, 'average:', average);
+
+      const again = prompt('Do you want to check again? yes/no');
+     
+      program = (again !== 'no');
     }
+    
+
 
   </script>
 </body>

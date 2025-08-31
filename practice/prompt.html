@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body{
+      background-color: gray;
+    }
+  </style>
+  <title>Document</title>
+</head>
+<body>
+  
+  <script>
+    while (true) {
+      const input = Number(prompt('Enter a number:'));
+
+      if (input % 2 === 0) {
+        alert('✅ You entered an Even Number: ' + input);
+      } else {
+        alert('✅ You entered an Odd Number: ' + input);
+      }
+
+      // if (!isNaN(input)) {
+      //   // valid number → break out of the loop
+      //   alert('❌ That is not a valid number. Try again!');
+      // }
+
+      const again = confirm('Do you want to check another number?');
+      if(!again){
+        alert('GoodBye!');
+        break;
+      }
+    }
+
+  </script>
+</body>
+</html>

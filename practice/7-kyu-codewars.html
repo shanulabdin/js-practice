@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 7 kyu, question 2
+    const question2 = function(){
+      var isSquare = function(n){
+        for (let i = 1; i * i <= n; i++){
+          if(i * i === n){
+            return true;
+          }
+        }
+        return false;
+      }
+      // couldnt solve it myself so im doing some similar problems
+      
+      function isCube(n){
+        for(let i = 1; i * i <= n; i++){
+          if(i * i * i === n){
+            return true;
+          }
+        }
+        return false;
+      }
+      console.log(isCube(27)) // true  (3*3*3 = 27)
+      console.log(isCube(8)) // true  (2*2*2 = 8)
+      console.log(isCube(9)) // false
+      console.log(isCube(1)) // true
+      console.log(isCube(10)) // false
+      
+      function isFourthPower(n){
+        for(let i = 1; i * i * i * i <= n; i++){
+          if(i * i * i * i === n){
+            return true;
+          }
+        }
+        return false;
+      }
+      console.log(isFourthPower(16) )  // true  (2*2*2*2 = 16)
+      console.log(isFourthPower(81) )  // true  (3*3*3*3 = 81)
+      console.log(isFourthPower(1)  )  // true
+      console.log(isFourthPower(8)  )  // false
+      console.log(isFourthPower(100))  // false
+      
+      function isPerfectPower(n){
+        for (let p = 2; p <= 10; p++){
+          for(let i = 1; i ** p <= n; i++){
+            if(i ** p === n){
+              return true;
+            }
+          }
+        }
+        return false;
+      }
+      console.log(isPerfectPower(16))   // true (2^4)
+      console.log(isPerfectPower(27))   // true (3^3)
+      console.log(isPerfectPower(9))   // true (3^2)
+      console.log(isPerfectPower(12))   // false
+    }
+    // question2();
+
+    
+  </script>
+</body>
+</html>

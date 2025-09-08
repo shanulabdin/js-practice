@@ -38,48 +38,102 @@
 
     // 2
 
-    let program = true;
-    let grades = [];
-    let sum = 0;
-    let average = 0;
+    // let program = true;
+    // let grades = [];
+    // let sum = 0;
+    // let average = 0;
 
-    while(program){
+    // while(program){
 
-      const score = Number(prompt('Enter the test score:'));
+    //   const score = Number(prompt('Enter the test score:'));
       
 
-      if(score >= 90 && score <= 100){
-        alert('A grade');
-        grades.push(score);
-      } else if (score >= 80 && score < 90){
-        alert('B grade');
-        grades.push(score);
-      } else if (score >= 70 && score < 80){
-        alert('C grade');
-        grades.push(score);
-      } else if (score >= 60 && score < 70){
-        alert('D grade');
-        grades.push(score);
-      } else if (score >= 0 && score < 60){
-        alert('F grade');
-        grades.push(score);
-      } else if (isNaN(score) || score < 0 || score > 100){
-        alert('Please enter a valid number between 0 and 100');
-      }
+    //   if(score >= 90 && score <= 100){
+    //     alert('A grade');
+    //     grades.push(score);
+    //   } else if (score >= 80 && score < 90){
+    //     alert('B grade');
+    //     grades.push(score);
+    //   } else if (score >= 70 && score < 80){
+    //     alert('C grade');
+    //     grades.push(score);
+    //   } else if (score >= 60 && score < 70){
+    //     alert('D grade');
+    //     grades.push(score);
+    //   } else if (score >= 0 && score < 60){
+    //     alert('F grade');
+    //     grades.push(score);
+    //   } else if (isNaN(score) || score < 0 || score > 100){
+    //     alert('Please enter a valid number between 0 and 100');
+    //   }
 
 
 
-      sum = grades.reduce((acc, crr) => acc + crr, 0);
-      average = sum / grades.length;
+    //   sum = grades.reduce((acc, crr) => acc + crr, 0);
+    //   average = sum / grades.length;
 
-      console.log('grades:', grades, 'sum:', sum, 'average:', average);
+    //   console.log('grades:', grades, 'sum:', sum, 'average:', average);
 
-      const again = prompt('Do you want to check again? yes/no');
+    //   const again = prompt('Do you want to check again? yes/no');
      
-      program = (again !== 'no');
-    }
+    //   program = (again !== 'no');
+    // }
     
+    function dnaToRna(dnaSequence) {
+  // Convert to uppercase and remove any spaces
+  const cleanDna = dnaSequence.toUpperCase().replace(/\s/g, '');
+  
+  // Check if input contains only valid DNA bases
+  if (!/^[ATGC]*$/.test(cleanDna)) {
+    return "Error: Invalid DNA sequence. Only A, T, G, C are allowed.";
+  }
+  
+  // Convert each base using replace with a function
+  const rnaSequence = cleanDna.replace(/[ATGC]/g, function(base) {
+    switch(base) {
+      case 'A': return 'U';
+      case 'T': return 'A';
+      case 'G': return 'C';
+      case 'C': return 'G';
+    }
+  });
+  
+  return rnaSequence;
+}
 
+// Interactive version with prompts
+let continueProgram = true;
+
+while (continueProgram) {
+  const dnaInput = prompt('Enter a DNA sequence (A, T, G, C):');
+  
+  if (dnaInput === null) {
+    // User clicked cancel
+    break;
+  }
+  
+  if (dnaInput.trim() === '') {
+    alert('Please enter a DNA sequence.');
+    continue;
+  }
+  
+  const result = dnaToRna(dnaInput);
+  
+  if (result.startsWith('Error:')) {
+    alert(result);
+  } else {
+    alert(`DNA: ${dnaInput.toUpperCase()}\nRNA: ${result}`);
+  }
+  
+  const again = prompt('Do you want to convert another sequence? (yes/no)');
+  continueProgram = (again && again.toLowerCase() === 'yes');
+}
+
+alert('Thanks for using the DNA to RNA converter!');
+
+// Test examples (uncomment to test)
+console.log(dnaToRna('ATGCTA')); // Should output: UACGAU
+console.log(dnaToRna('AAATTTGGGCCC')); // Should output: UUUAAACCCGGG
 
   </script>
 </body>

@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>7 kyu Codewars</title>
 </head>
 <body>
   <script>
     // 7 kyu, question 2
-    const question2 = function(){
+    const question2 = () => {
       var isSquare = function(n){
         for (let i = 0; i * i <= n; i++){
           if(i * i === n){
@@ -65,7 +65,7 @@
     // question2();
 
     // 7 kyu, question 3
-    const question3 = function(){
+    const question3 = () => {
 
       function getCount(str) {
         // my try
@@ -100,7 +100,7 @@
     // question3();
 
     // 7 kyu, question 4
-    const question4 = function(){    
+    const question4 = () => {    
       Object.defineProperty(
         String.prototype,
         'toJadenCase',
@@ -209,7 +209,50 @@
       // capitalizeLast("javascript is fun");
       // // "javascripT iS fuN"
   }
-  // question4();
+    // question4();
+
+    //   // 7 kyu question 5
+    const question5 = () => {
+      function inviteMoreWomen(L) {
+        
+        const result = L.reduce((acc, crr) => acc + crr, 0);
+        if(result > 0){
+          return true
+        } else if(result <= 0){
+          return false
+        }
+        
+      }
+      console.log(
+      inviteMoreWomen([1, -1, 1]),
+      inviteMoreWomen([-1, -1, -1]),
+      inviteMoreWomen([1, 1, 1]))
+    }
+    // question5()
+
+    // 7 kyu question 6
+    const question6 = () => {
+
+      function minMinMax(array) {
+        
+        let smallest = Math.min(...array);
+        
+        
+        let largest = Math.max(...array)
+        
+        
+        const mySet = new Set(array);
+        let minimumAbsent = smallest + 1;
+        while (mySet.has(minimumAbsent)) minimumAbsent++;
+        
+        return [smallest, minimumAbsent, largest];
+      }
+      console.log(minMinMax([-1, 4, 5, -23, 24]), //[-23, -22, 24]
+      minMinMax([1, 3, -3, -2, 8, -1]), //[-3, 0, 8]
+      minMinMax([2, -4, 8, -5, 9, 7])); //[-5, -3,9]
+    }
+    // question6();
+
   </script>
 </body>
 </html>

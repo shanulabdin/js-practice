@@ -252,6 +252,48 @@
       minMinMax([2, -4, 8, -5, 9, 7])); //[-5, -3,9]
     }
     // question6();
+
+    //   // 7 kyu question 7
+    const question7 = () => {
+      
+function randomCase(x){
+  return x.split('')
+          .map(ch => Math.random() > 0.5 ? ch.toUpperCase() : ch.toLowerCase())
+          .join('')
+}
+
+
+console.log(randomCase("Lorem ipsum dolor sit amet, consectetur adipiscing elit"))
+
+
+// function randomCase(...strings) {
+//   // Code your solution here
+//   return strings.map(x => {
+    
+//   const letters = x.split('');
+  
+//   let randomCase = '';
+//   for(let i = 0; i < letters.length; i++){
+//     let random = Math.round(Math.random());
+  
+//     if(random === 0){
+//       randomCase += letters[i].toUpperCase();
+//     } else if (random === 1){
+//       randomCase += letters[i].toLowerCase();
+//     }
+    
+//   }
+//   return randomCase
+//   })
+// }
+
+// console.log(randomCase("Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+//   "Donec eleifend cursus lobortis",
+//   "THIS IS AN ALL CAPS STRING",
+//   "this is an all lower string"))
+    }
+    // question7();
+
   </script>
 </body>
 </html>

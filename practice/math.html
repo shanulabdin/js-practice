@@ -21,9 +21,9 @@
     const display = document.querySelector('#display');
 
     function percentage(){
-      const calculate = (age.value / estAge.value) * 100 + '%';
-      display.innerHTML = `<p>${calculate} Percent.</p>`;
-      document.querySelectorAll('input').forEach(input => input.value = '');
+      const calculate = ((age.valueAsNumber / estAge.valueAsNumber) * 100).toFixed(2);
+      display.innerHTML = `<p>${calculate}% Percent.</p>`;
+      age.value = estAge.value = '';
     }
     
     

@@ -6,27 +6,42 @@
   <title>Math</title>
 </head>
 <body>
-  <input id="input" type="number">
-  <div id="display">
+  <input id="age" type="number" placeholder="age">
+  <input id="estAge" type="number" placeholder="estAge">
 
-  </div>
+  <div id="display"></div>
+
   <button onclick="displayValue()">
     displayValue
   </button>
-  <script>
-    const input = document.querySelector('#input');
-    console.log(input);
-    const display = document.querySelector('#display');
-    function displayValue() {
-      const inputValue = input.valueAsNumber;
-      console.log(inputValue);
-      display.innerHTML += `<p>${inputValue}</p>`;
-    }
 
-    function percentage(a, b){
-      return a / b * 100 + '%';
+  <button onclick="percentage()">
+    percentage
+  </button>
+
+
+  <script>
+    const age = document.querySelector('#age');
+    const estAge = document.querySelector('#estAge');
+
+    const display = document.querySelector('#display');
+
+    let ageValue;
+    let estAgeValue;
+
+    function displayValue() {
+      ageValue = age.valueAsNumber;
+      estAgeValue = estAge.valueAsNumber;
+      console.log('age: ', ageValue);
+      console.log('estAge: ', estAgeValue);
     }
-    console.log(percentage(4, 80));
+    
+    function percentage(){
+      console.log('percentage: ', estAgeValue / ageValue);
+    }
+    // percentage(age, estAge);
+
+    // document.querySelectorAll('input').innerText = ''
   </script>
 </body>
 </html>

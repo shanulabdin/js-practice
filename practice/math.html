@@ -6,8 +6,8 @@
   <title>Math</title>
 </head>
 <body>
-  <input id="age" type="number" placeholder="age">
-  <input id="estAge" type="number" placeholder="estAge">
+  <input id="age" class="input" type="number" placeholder="age">
+  <input id="estAge" class="input" type="number" placeholder="estAge">
 
   <div id="display"></div>
 
@@ -39,6 +39,7 @@
     function percentage(){
       const percentage =  ageValue / estAgeValue * 100 + '%';
       display.innerHTML = `<p>${percentage}</p>`
+      document.querySelectorAll('.input').forEach(input => {input.value = ''});
     }
   </script>
 </body>

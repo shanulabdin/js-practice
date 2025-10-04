@@ -6,7 +6,23 @@
   <title>Math</title>
 </head>
 <body>
+  <input id="input" type="number">
+  <div id="display">
+
+  </div>
+  <button onclick="displayValue()">
+    displayValue
+  </button>
   <script>
+    const input = document.querySelector('#input');
+    console.log(input);
+    const display = document.querySelector('#display');
+    function displayValue() {
+      const inputValue = input.valueAsNumber;
+      console.log(inputValue);
+      display.innerHTML += `<p>${inputValue}</p>`;
+    }
+
     function percentage(a, b){
       return a / b * 100 + '%';
     }

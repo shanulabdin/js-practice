@@ -37,11 +37,9 @@
     }
     
     function percentage(){
-      console.log('percentage: ', estAgeValue / ageValue);
+      const percentage =  ageValue / estAgeValue * 100 + '%';
+      display.innerHTML = `<p>${percentage}</p>`
     }
-    // percentage(age, estAge);
-
-    // document.querySelectorAll('input').innerText = ''
   </script>
 </body>
 </html>

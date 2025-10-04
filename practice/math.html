@@ -11,14 +11,9 @@
 
   <div id="display"></div>
 
-  <button onclick="displayValue()">
-    displayValue
-  </button>
-
-  <button onclick="percentage()">
+  <button onclick="displayValue(), percentage()">
     percentage
   </button>
-
 
   <script>
     const age = document.querySelector('#age');
@@ -38,6 +33,7 @@
     
     function percentage(){
       const percentage =  ageValue / estAgeValue * 100 + '%';
+      console.log(percentage);
       display.innerHTML = `<p>${percentage}</p>`
       document.querySelectorAll('.input').forEach(input => {input.value = ''});
     }

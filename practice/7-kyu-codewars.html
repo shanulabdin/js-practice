@@ -3,9 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>7 kyu Codewars</title>
 </head>
-<body>
+<body style="background-color: gray;">
   <script>
     // 7 kyu, question 2
     const question2 = () => {
@@ -254,17 +255,19 @@
     // question6();
 
     //   // 7 kyu question 7
-    const question7 = () => {}
+    const question7 = () => {
+
       
-function randomCase(x){
-  return x.split('')
-          .map(ch => Math.random() > 0.5 ? ch.toUpperCase() : ch.toLowerCase())
-          .join('')
-}
-
-
-console.log(randomCase("Lorem ipsum dolor sit amet, consectetur adipiscing elit"))
-
+      function randomCase(x){
+        return x.split('')
+        .map(ch => Math.random() > 0.5 ? ch.toUpperCase() : ch.toLowerCase())
+        .join('')
+      }
+      
+      
+      console.log(randomCase("Lorem ipsum dolor sit amet, consectetur adipiscing elit"))
+    }
+      
 
 // function randomCase(...strings) {
 //   // Code your solution here
@@ -291,7 +294,9 @@ console.log(randomCase("Lorem ipsum dolor sit amet, consectetur adipiscing elit"
 //   "Donec eleifend cursus lobortis",
 //   "THIS IS AN ALL CAPS STRING",
 //   "this is an all lower string"))
-    // 7 kyu question 7
+
+
+    // 7 kyu question 8
     const question8 = () => {
 
       function validateBase(num, base) {
@@ -308,6 +313,27 @@ console.log(randomCase("Lorem ipsum dolor sit amet, consectetur adipiscing elit"
     }
     // question8();
 
+// Inputs: "abc", "bc"
+// Output: true
+
+// Inputs: "abc", "d"
+// Output: false
+
+    // 7 kyu question 9
+    const question9 = () => {
+
+      function solution(str, ending){
+        if(str.endsWith(ending)){
+          return true;
+        } else {
+          return false;
+        }
+      }
+
+      console.log(solution('abc', 'bc')) // true
+      console.log(solution('abc', 'ac')) // false
+    }
+    question9();
   </script>
 </body>
 </html>
